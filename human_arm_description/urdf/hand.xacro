@@ -70,7 +70,7 @@
     <parent link="humerus" />
     <child link="elbow" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-3.142" upper="0" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
@@ -109,7 +109,7 @@
     <parent link="elbow" />
     <child link="forearm" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="2.4" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
@@ -147,7 +147,7 @@
     <parent link="forearm" />
     <child link="wristy" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-3.142" upper="2" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
@@ -187,7 +187,7 @@
     <parent link="wristy" />
     <child link="wristx" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.697" upper="0.697" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
@@ -299,15 +299,32 @@
 
 
 
+
+
+
+
+
+
+<!-- ############################################################################
+############################################################################
+##################### INDEX FINGER ######################################## -->
+
+
+
 <joint
     name="palm_index0" type="revolute">
-    <origin xyz="0.010 -0.065 0.000" rpy="0 0 0" />
+    <origin xyz="0.010 -0.060 0.000" rpy="0 0 0" />
     <parent link="palm" />
     <child link="index0" />
     <axis xyz="0 0 1" />
     <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
+
+
+
+
+
 
 
 
@@ -340,7 +357,7 @@
 
 <joint
     name="index0_index1" type="revolute">
-    <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
+    <origin xyz="0.00 -0.015 0.000" rpy="0 0 0" />
     <parent link="index0" />
     <child link="index1" />
     <axis xyz="1 0 0" />
@@ -378,7 +395,7 @@
 
 <joint
     name="index1_index2" type="revolute">
-    <origin xyz="0.001 -0.045 0.000" rpy="0 0 0" />
+    <origin xyz="0.001 -0.040 0.000" rpy="0 0 0" />
     <parent link="index1" />
     <child link="index2" />
     <axis xyz="1 0 0" />
@@ -418,7 +435,7 @@
 
 <joint
     name="index2_index3" type="revolute">
-    <origin xyz="0.00 -0.022 0.000" rpy="0 0 0" />
+    <origin xyz="0.00 -0.017 0.000" rpy="0 0 0" />
     <parent link="index2" />
     <child link="index3" />
     <axis xyz="1 0 0" />
@@ -468,7 +485,7 @@
 
 <joint
     name="palm_middle0" type="revolute">
-    <origin xyz="-0.014 -0.07 0.000" rpy="0 0 0" />
+    <origin xyz="-0.011 -0.07 0.000" rpy="0 0 0" />
     <parent link="palm" />
     <child link="middle0" />
     <axis xyz="0 0 1" />
@@ -618,6 +635,526 @@
     </collision>
 </link>
 
+
+
+
+
+
+<!-- ############################################################################
+############################################################################
+##################### RING FINGER ######################################## -->
+
+
+
+
+
+
+
+
+
+
+
+
+<joint
+    name="palm_ring0" type="revolute">
+    <origin xyz="-0.034 -0.065 0.000" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="ring0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="ring0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/ring0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/ring0.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+<joint
+    name="ring0_ring1" type="revolute">
+    <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
+    <parent link="ring0" />
+    <child link="ring1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="ring1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/ring1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/ring1.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+<joint
+    name="ring1_ring2" type="revolute">
+    <origin xyz="0.001 -0.041 0.000" rpy="0 0 0" />
+    <parent link="ring1" />
+    <child link="ring2" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="ring2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/ring2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/ring2.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<joint
+    name="ring2_ring3" type="revolute">
+    <origin xyz="0.00 -0.019 0.000" rpy="0 0 0" />
+    <parent link="ring2" />
+    <child link="ring3" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="ring3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/ring3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/ring3.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<!-- ############################################################################
+############################################################################
+##################### PINKY FINGER ######################################## -->
+
+
+
+
+
+
+<joint
+    name="palm_pinky0" type="revolute">
+    <origin xyz="-0.056 -0.05 0.000" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="pinky0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="pinky0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/pinky0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/pinky0.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+<joint
+    name="pinky0_pinky1" type="revolute">
+    <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
+    <parent link="pinky0" />
+    <child link="pinky1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="pinky1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/pinky1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/pinky1.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+<joint
+    name="pinky1_pinky2" type="revolute">
+    <origin xyz="0.001 -0.041 0.000" rpy="0 0 0" />
+    <parent link="pinky1" />
+    <child link="pinky2" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="pinky2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/pinky2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/pinky2.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<joint
+    name="pinky2_pinky3" type="revolute">
+    <origin xyz="0.00 -0.019 0.000" rpy="0 0 0" />
+    <parent link="pinky2" />
+    <child link="pinky3" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="pinky3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/pinky3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/pinky3.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+<!-- ############################################################################
+############################################################################
+##################### Thumb FINGER ######################################## -->
+
+
+
+
+
+
+
+
+
+
+<joint
+    name="palm_thumb0" type="revolute">
+    <origin xyz="0.02 -0.02 0.000" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="thumb0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="thumb0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/thumb0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/thumb0.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+<joint
+    name="thumb0_thumb1" type="revolute">
+    <origin xyz="0.02 0 0.000" rpy="0 0 0" />
+    <parent link="thumb0" />
+    <child link="thumb1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="thumb1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/thumb1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/thumb1.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+<joint
+    name="thumb1_thumb2" type="revolute">
+    <origin xyz="0.021 0 0.000" rpy="0 0 0" />
+    <parent link="thumb1" />
+    <child link="thumb2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="thumb2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/thumb2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/thumb2.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<joint
+    name="thumb2_thumb3" type="revolute">
+    <origin xyz="0.02 0 0.000" rpy="0 0 0" />
+    <parent link="thumb2" />
+    <child link="thumb3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="thumb3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/thumb3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/thumb3.stl" />
+      </geometry>
+    </collision>
+</link>
 
 
 
