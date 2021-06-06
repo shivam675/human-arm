@@ -1,0 +1,646 @@
+<?xml version='1.0'?>
+
+<robot name="hand" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+
+
+<link name="shoulder">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0363799" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/shoulder.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+         <mesh  filename="package://human_arm_description/meshes/shoulder.stl" />
+      </geometry>
+    </collision>
+</link>
+
+<joint
+    name="shoulder_humerus" type="revolute">
+    <origin xyz="0 0 0.015" rpy="0 0 0" />
+    <parent link="shoulder" />
+    <child link="humerus" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.14" upper="0.345" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+<link name="humerus">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/humerus.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/humerus.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+<joint
+    name="humerus_elbow" type="revolute">
+    <origin xyz="-0.001 -0.15 0.0147" rpy="0 0 0" />
+    <parent link="humerus" />
+    <child link="elbow" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="elbow">
+    <inertial>
+      <origin xyz="0.00116385 -0.0740893 -0.0073153" rpy="-1.21278e-13 1.94289e-16 -0.0115373" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/elbow.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/elbow.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+<joint
+    name="elbow_forearm" type="revolute">
+    <origin xyz="0.01 -0.145 -0.015" rpy="0 0 0" />
+    <parent link="elbow" />
+    <child link="forearm" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="forearm">
+    <inertial>
+      <origin xyz="0.00116385 -0.0740893 -0.0073153" rpy="-1.21278e-13 1.94289e-16 -0.0115373" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/forearm.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/forearm.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+<joint
+    name="forearm_wristy" type="revolute">
+    <origin xyz="0.000 -0.185 0.015" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wristy" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="wristy">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/wristy.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/wristy.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<joint
+    name="wristy_wristx" type="revolute">
+    <origin xyz="0.000 -0.06 0.002" rpy="0 0 0" />
+    <parent link="wristy" />
+    <child link="wristx" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="wristx">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/wristx.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/wristx.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+
+<joint
+    name="wristx_wristz" type="revolute">
+    <origin xyz="0.000 -0.035 0.000" rpy="0 0 0" />
+    <parent link="wristx" />
+    <child link="wristz" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="wristz">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/wristz.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/wristz.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+<joint
+    name="wristz_palm" type="fixed">
+    <origin xyz="0.03 -0.02 0.000" rpy="0 0 0" />
+    <parent link="wristz" />
+    <child link="palm" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="palm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/palm.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/palm.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+<joint
+    name="palm_index0" type="revolute">
+    <origin xyz="0.010 -0.065 0.000" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="index0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="index0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/index0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/index0.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+<joint
+    name="index0_index1" type="revolute">
+    <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
+    <parent link="index0" />
+    <child link="index1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="index1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/index1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/index1.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+<joint
+    name="index1_index2" type="revolute">
+    <origin xyz="0.001 -0.045 0.000" rpy="0 0 0" />
+    <parent link="index1" />
+    <child link="index2" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="index2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/index2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/index2.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<joint
+    name="index2_index3" type="revolute">
+    <origin xyz="0.00 -0.022 0.000" rpy="0 0 0" />
+    <parent link="index2" />
+    <child link="index3" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="index3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/index3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/index3.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+
+
+
+<!-- ############################################################################
+############################################################################
+##################### MIDDLE FINGER ######################################## -->
+
+
+
+<joint
+    name="palm_middle0" type="revolute">
+    <origin xyz="-0.014 -0.07 0.000" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="middle0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="middle0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/middle0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/middle0.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+<joint
+    name="middle0_middle1" type="revolute">
+    <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
+    <parent link="middle0" />
+    <child link="middle1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="middle1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/middle1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/middle1.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+<joint
+    name="middle1_middle2" type="revolute">
+    <origin xyz="0.001 -0.045 0.000" rpy="0 0 0" />
+    <parent link="middle1" />
+    <child link="middle2" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="middle2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/middle2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/middle2.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+<joint
+    name="middle2_middle3" type="revolute">
+    <origin xyz="0.00 -0.023 0.000" rpy="0 0 0" />
+    <parent link="middle2" />
+    <child link="middle3" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
+
+
+
+<link name="middle3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/middle3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/middle3.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</robot>
+
+
+
+
+
+
+
+
+
+
+
