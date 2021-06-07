@@ -3,9 +3,9 @@
 <robot name="hand" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
+<xacro:property name="prefix" value="right_"/>
 
-
-<link name="shoulder">
+<link name="${prefix}shoulder">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.0363799" />
@@ -29,17 +29,17 @@
 </link>
 
 <joint
-    name="shoulder_humerus" type="revolute">
+    name="${prefix}shoulder_humerus" type="revolute">
     <origin xyz="0 0 0.015" rpy="0 0 0" />
-    <parent link="shoulder" />
-    <child link="humerus" />
+    <parent link="${prefix}shoulder" />
+    <child link="${prefix}humerus" />
     <axis xyz="1 0 0" />
     <limit lower="-3.14" upper="0.345" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
-<link name="humerus">
+<link name="${prefix}humerus">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -65,10 +65,10 @@
 
 
 <joint
-    name="humerus_elbow" type="revolute">
+    name="${prefix}humerus_elbow" type="revolute">
     <origin xyz="-0.001 -0.15 0.0147" rpy="0 0 0" />
-    <parent link="humerus" />
-    <child link="elbow" />
+    <parent link="${prefix}humerus" />
+    <child link="${prefix}elbow" />
     <axis xyz="0 1 0" />
     <limit lower="-3.142" upper="0" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
@@ -76,7 +76,7 @@
 
 
 
-<link name="elbow">
+<link name="${prefix}elbow">
     <inertial>
       <origin xyz="0.00116385 -0.0740893 -0.0073153" rpy="-1.21278e-13 1.94289e-16 -0.0115373" />
       <mass value="0.7" />
@@ -104,10 +104,10 @@
 
 
 <joint
-    name="elbow_forearm" type="revolute">
+    name="${prefix}elbow_forearm" type="revolute">
     <origin xyz="0.01 -0.145 -0.015" rpy="0 0 0" />
-    <parent link="elbow" />
-    <child link="forearm" />
+    <parent link="${prefix}elbow" />
+    <child link="${prefix}forearm" />
     <axis xyz="0 0 1" />
     <limit lower="0" upper="2.4" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
@@ -115,7 +115,7 @@
 
 
 
-<link name="forearm">
+<link name="${prefix}forearm">
     <inertial>
       <origin xyz="0.00116385 -0.0740893 -0.0073153" rpy="-1.21278e-13 1.94289e-16 -0.0115373" />
       <mass value="0.7" />
@@ -142,10 +142,10 @@
 
 
 <joint
-    name="forearm_wristy" type="revolute">
+    name="${prefix}forearm_wristy" type="revolute">
     <origin xyz="0.000 -0.185 0.015" rpy="0 0 0" />
-    <parent link="forearm" />
-    <child link="wristy" />
+    <parent link="${prefix}forearm" />
+    <child link="${prefix}wristy" />
     <axis xyz="0 1 0" />
     <limit lower="-3.142" upper="2" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
@@ -153,7 +153,7 @@
 
 
 
-<link name="wristy">
+<link name="${prefix}wristy">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -182,10 +182,10 @@
 
 
 <joint
-    name="wristy_wristx" type="revolute">
+    name="${prefix}wristy_wristx" type="revolute">
     <origin xyz="0.000 -0.06 0.002" rpy="0 0 0" />
-    <parent link="wristy" />
-    <child link="wristx" />
+    <parent link="${prefix}wristy" />
+    <child link="${prefix}wristx" />
     <axis xyz="0 0 1" />
     <limit lower="-0.697" upper="0.697" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
@@ -193,7 +193,7 @@
 
 
 
-<link name="wristx">
+<link name="${prefix}wristx">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -224,18 +224,18 @@
 
 
 <joint
-    name="wristx_wristz" type="revolute">
+    name="${prefix}wristx_wristz" type="revolute">
     <origin xyz="0.000 -0.035 0.000" rpy="0 0 0" />
-    <parent link="wristx" />
-    <child link="wristz" />
-    <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <parent link="${prefix}wristx" />
+    <child link="${prefix}wristz" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="wristz">
+<link name="${prefix}wristz">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -261,10 +261,10 @@
 
 
 <joint
-    name="wristz_palm" type="fixed">
+    name="${prefix}wristz_palm" type="fixed">
     <origin xyz="0.03 -0.02 0.000" rpy="0 0 0" />
-    <parent link="wristz" />
-    <child link="palm" />
+    <parent link="${prefix}wristz" />
+    <child link="${prefix}palm" />
     <axis xyz="0 0 1" />
     <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
@@ -272,7 +272,7 @@
 
 
 
-<link name="palm">
+<link name="${prefix}palm">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -312,12 +312,12 @@
 
 
 <joint
-    name="palm_index0" type="revolute">
+    name="${prefix}palm_index0" type="revolute">
     <origin xyz="0.010 -0.060 0.000" rpy="0 0 0" />
-    <parent link="palm" />
-    <child link="index0" />
+    <parent link="${prefix}palm" />
+    <child link="${prefix}index0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.3" upper="0.3" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
@@ -328,7 +328,7 @@
 
 
 
-<link name="index0">
+<link name="${prefix}index0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -356,18 +356,18 @@
 
 
 <joint
-    name="index0_index1" type="revolute">
+    name="${prefix}index0_index1" type="revolute">
     <origin xyz="0.00 -0.015 0.000" rpy="0 0 0" />
-    <parent link="index0" />
-    <child link="index1" />
+    <parent link="${prefix}index0" />
+    <child link="${prefix}index1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.2" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="index1">
+<link name="${prefix}index1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -394,18 +394,18 @@
 
 
 <joint
-    name="index1_index2" type="revolute">
+    name="${prefix}index1_index2" type="revolute">
     <origin xyz="0.001 -0.040 0.000" rpy="0 0 0" />
-    <parent link="index1" />
-    <child link="index2" />
+    <parent link="${prefix}index1" />
+    <child link="${prefix}index2" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="index2">
+<link name="${prefix}index2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -414,7 +414,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh  filename="package://human_arm_description/meshes/index2.stl" />
+        <mesh  filename="package://human_arm_description/meshes/index2.stl" scale="1 0.8 1" />
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1" />
@@ -423,7 +423,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-          <mesh  filename="package://human_arm_description/meshes/index2.stl" />
+          <mesh  filename="package://human_arm_description/meshes/index2.stl" scale="1 0.8 1" />
       </geometry>
     </collision>
 </link>
@@ -434,18 +434,18 @@
 
 
 <joint
-    name="index2_index3" type="revolute">
+    name="${prefix}index2_index3" type="revolute">
     <origin xyz="0.00 -0.017 0.000" rpy="0 0 0" />
-    <parent link="index2" />
-    <child link="index3" />
+    <parent link="${prefix}index2" />
+    <child link="${prefix}index3" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="index3">
+<link name="${prefix}index3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -484,18 +484,18 @@
 
 
 <joint
-    name="palm_middle0" type="revolute">
+    name="${prefix}palm_middle0" type="revolute">
     <origin xyz="-0.011 -0.07 0.000" rpy="0 0 0" />
-    <parent link="palm" />
-    <child link="middle0" />
+    <parent link="${prefix}palm" />
+    <child link="${prefix}middle0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.3" upper="0.3" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="middle0">
+<link name="${prefix}middle0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -523,18 +523,18 @@
 
 
 <joint
-    name="middle0_middle1" type="revolute">
+    name="${prefix}middle0_middle1" type="revolute">
     <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
-    <parent link="middle0" />
-    <child link="middle1" />
+    <parent link="${prefix}middle0" />
+    <child link="${prefix}middle1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.2" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="middle1">
+<link name="${prefix}middle1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -561,18 +561,18 @@
 
 
 <joint
-    name="middle1_middle2" type="revolute">
+    name="${prefix}middle1_middle2" type="revolute">
     <origin xyz="0.001 -0.045 0.000" rpy="0 0 0" />
-    <parent link="middle1" />
-    <child link="middle2" />
+    <parent link="${prefix}middle1" />
+    <child link="${prefix}middle2" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="middle2">
+<link name="${prefix}middle2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -581,7 +581,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh  filename="package://human_arm_description/meshes/middle2.stl" />
+        <mesh  filename="package://human_arm_description/meshes/middle2.stl" scale="1 0.9 1"/>
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1" />
@@ -590,7 +590,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-          <mesh  filename="package://human_arm_description/meshes/middle2.stl" />
+          <mesh  filename="package://human_arm_description/meshes/middle2.stl" scale="1 0.9 1"/>
       </geometry>
     </collision>
 </link>
@@ -601,18 +601,18 @@
 
 
 <joint
-    name="middle2_middle3" type="revolute">
+    name="${prefix}middle2_middle3" type="revolute">
     <origin xyz="0.00 -0.023 0.000" rpy="0 0 0" />
-    <parent link="middle2" />
-    <child link="middle3" />
+    <parent link="${prefix}middle2" />
+    <child link="${prefix}middle3" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="middle3">
+<link name="${prefix}middle3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -656,18 +656,18 @@
 
 
 <joint
-    name="palm_ring0" type="revolute">
+    name="${prefix}palm_ring0" type="revolute">
     <origin xyz="-0.034 -0.065 0.000" rpy="0 0 0" />
-    <parent link="palm" />
-    <child link="ring0" />
+    <parent link="${prefix}palm" />
+    <child link="${prefix}ring0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.3" upper="0.3" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="ring0">
+<link name="${prefix}ring0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -694,18 +694,18 @@
 
 
 <joint
-    name="ring0_ring1" type="revolute">
+    name="${prefix}ring0_ring1" type="revolute">
     <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
-    <parent link="ring0" />
-    <child link="ring1" />
+    <parent link="${prefix}ring0" />
+    <child link="${prefix}ring1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.2" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="ring1">
+<link name="${prefix}ring1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -735,18 +735,18 @@
 
 
 <joint
-    name="ring1_ring2" type="revolute">
+    name="${prefix}ring1_ring2" type="revolute">
     <origin xyz="0.001 -0.041 0.000" rpy="0 0 0" />
-    <parent link="ring1" />
-    <child link="ring2" />
+    <parent link="${prefix}ring1" />
+    <child link="${prefix}ring2" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="ring2">
+<link name="${prefix}ring2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -755,7 +755,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh  filename="package://human_arm_description/meshes/ring2.stl" />
+        <mesh  filename="package://human_arm_description/meshes/ring2.stl" scale="1 0.8 1" />
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1" />
@@ -764,7 +764,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-          <mesh  filename="package://human_arm_description/meshes/ring2.stl" />
+          <mesh  filename="package://human_arm_description/meshes/ring2.stl" scale="1 0.8 1" />
       </geometry>
     </collision>
 </link>
@@ -775,18 +775,18 @@
 
 
 <joint
-    name="ring2_ring3" type="revolute">
+    name="${prefix}ring2_ring3" type="revolute">
     <origin xyz="0.00 -0.019 0.000" rpy="0 0 0" />
-    <parent link="ring2" />
-    <child link="ring3" />
+    <parent link="${prefix}ring2" />
+    <child link="${prefix}ring3" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="ring3">
+<link name="${prefix}ring3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -824,18 +824,18 @@
 
 
 <joint
-    name="palm_pinky0" type="revolute">
+    name="${prefix}palm_pinky0" type="revolute">
     <origin xyz="-0.056 -0.05 0.000" rpy="0 0 0" />
-    <parent link="palm" />
-    <child link="pinky0" />
+    <parent link="${prefix}palm" />
+    <child link="${prefix}pinky0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.3" upper="0.3" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="pinky0">
+<link name="${prefix}pinky0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -865,18 +865,18 @@
 
 
 <joint
-    name="pinky0_pinky1" type="revolute">
+    name="${prefix}pinky0_pinky1" type="revolute">
     <origin xyz="0.00 -0.020 0.000" rpy="0 0 0" />
-    <parent link="pinky0" />
-    <child link="pinky1" />
+    <parent link="${prefix}pinky0" />
+    <child link="${prefix}pinky1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.2" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="pinky1">
+<link name="${prefix}pinky1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -906,18 +906,18 @@
 
 
 <joint
-    name="pinky1_pinky2" type="revolute">
+    name="${prefix}pinky1_pinky2" type="revolute">
     <origin xyz="0.001 -0.041 0.000" rpy="0 0 0" />
-    <parent link="pinky1" />
-    <child link="pinky2" />
+    <parent link="${prefix}pinky1" />
+    <child link="${prefix}pinky2" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="pinky2">
+<link name="${prefix}pinky2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -946,18 +946,18 @@
 
 
 <joint
-    name="pinky2_pinky3" type="revolute">
+    name="${prefix}pinky2_pinky3" type="revolute">
     <origin xyz="0.00 -0.019 0.000" rpy="0 0 0" />
-    <parent link="pinky2" />
-    <child link="pinky3" />
+    <parent link="${prefix}pinky2" />
+    <child link="${prefix}pinky3" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.57" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="pinky3">
+<link name="${prefix}pinky3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -991,27 +991,35 @@
 ##################### Thumb FINGER ######################################## -->
 
 
+<joint
+    name="${prefix}palm_thumb_zero" type="revolute">
+    <origin xyz="0.00 -0.02 0.000" rpy="0 0 0" />
+    <parent link="${prefix}palm" />
+    <child link="${prefix}thumb_zero_zero" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.8" effort="10000" velocity="0.5"/>
+    <dynamics damping="5" friction="0.0"/>
+</joint>
 
-
-
+<link name="${prefix}thumb_zero_zero"/>
 
 
 
 
 
 <joint
-    name="palm_thumb0" type="revolute">
-    <origin xyz="0.02 -0.02 0.000" rpy="0 0 0" />
-    <parent link="palm" />
-    <child link="thumb0" />
+    name="${prefix}palm_thumb0" type="revolute">
+    <origin xyz="0.00 -0.0 0.000" rpy="0 0 0" />
+    <parent link="${prefix}thumb_zero_zero" />
+    <child link="${prefix}thumb0" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="0" upper="1.8" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="thumb0">
+<link name="${prefix}thumb0">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -1041,18 +1049,18 @@
 
 
 <joint
-    name="thumb0_thumb1" type="revolute">
+    name="${prefix}thumb0_thumb1" type="revolute">
     <origin xyz="0.02 0 0.000" rpy="0 0 0" />
-    <parent link="thumb0" />
-    <child link="thumb1" />
+    <parent link="${prefix}thumb0" />
+    <child link="${prefix}thumb1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-1" upper="0" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="thumb1">
+<link name="${prefix}thumb1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -1061,7 +1069,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh  filename="package://human_arm_description/meshes/thumb1.stl" />
+        <mesh  filename="package://human_arm_description/meshes/thumb1.stl" scale="0.6 1 1" />
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1" />
@@ -1070,7 +1078,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-          <mesh  filename="package://human_arm_description/meshes/thumb1.stl" />
+          <mesh  filename="package://human_arm_description/meshes/thumb1.stl" scale="0.6 1 1" />
       </geometry>
     </collision>
 </link>
@@ -1082,18 +1090,18 @@
 
 
 <joint
-    name="thumb1_thumb2" type="revolute">
-    <origin xyz="0.021 0 0.000" rpy="0 0 0" />
-    <parent link="thumb1" />
-    <child link="thumb2" />
+    name="${prefix}thumb1_thumb2" type="revolute">
+    <origin xyz="0.018 0 0.000" rpy="0 0 0" />
+    <parent link="${prefix}thumb1" />
+    <child link="${prefix}thumb2" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.8" upper="0" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="thumb2">
+<link name="${prefix}thumb2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
@@ -1102,7 +1110,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh  filename="package://human_arm_description/meshes/thumb2.stl" />
+        <mesh  filename="package://human_arm_description/meshes/thumb2.stl" scale="0.6 1 1"/>
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1" />
@@ -1111,7 +1119,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-          <mesh  filename="package://human_arm_description/meshes/thumb2.stl" />
+          <mesh  filename="package://human_arm_description/meshes/thumb2.stl" scale="0.6 1 1" />
       </geometry>
     </collision>
 </link>
@@ -1122,18 +1130,18 @@
 
 
 <joint
-    name="thumb2_thumb3" type="revolute">
+    name="${prefix}thumb2_thumb3" type="revolute">
     <origin xyz="0.02 0 0.000" rpy="0 0 0" />
-    <parent link="thumb2" />
-    <child link="thumb3" />
+    <parent link="${prefix}thumb2" />
+    <child link="${prefix}thumb3" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="10000" velocity="0.5"/>
+    <limit lower="-0.697" upper="0" effort="10000" velocity="0.5"/>
     <dynamics damping="5" friction="0.0"/>
 </joint>
 
 
 
-<link name="thumb3">
+<link name="${prefix}thumb3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.7" />
