@@ -1,0 +1,483 @@
+<?xml version='1.0'?>
+
+<robot name="right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:property name="prefix" value="right_"/>
+
+<transmission name="${prefix}shoulder_humerus_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}shoulder_humerus">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}shoulder_humerus_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="${prefix}humerus_elbow_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}humerus_elbow">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}humerus_elbow_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}elbow_forearm_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}elbow_forearm">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}elbow_forearm_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}forearm_wristy_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}forearm_wristy">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}forearm_wristy_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}wristy_wristx_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}wristy_wristx">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}wristy_wristx_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}wristx_wristz_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}wristx_wristz">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}wristx_wristz_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<!-- <transmission name="${prefix}wristz_palm_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}wristz_palm">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}wristz_palm_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission> -->
+
+
+<transmission name="${prefix}palm_index0_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}palm_index0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}palm_index0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}index0_index1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}index0_index1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}index0_index1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}index1_index2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}index1_index2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}index1_index2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}index2_index3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}index2_index3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}index2_index3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}palm_middle0_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}palm_middle0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}palm_middle0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}middle0_middle1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}middle0_middle1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}middle0_middle1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}middle1_middle2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}middle1_middle2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}middle1_middle2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}middle2_middle3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}middle2_middle3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}middle2_middle3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}palm_ring0_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}palm_ring0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}palm_ring0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}ring0_ring1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}ring0_ring1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}ring0_ring1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}ring1_ring2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}ring1_ring2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}ring1_ring2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}ring2_ring3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}ring2_ring3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}ring2_ring3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}palm_pinky0_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}palm_pinky0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}palm_pinky0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}pinky0_pinky1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}pinky0_pinky1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}pinky0_pinky1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}pinky1_pinky2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}pinky1_pinky2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}pinky1_pinky2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}pinky2_pinky3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}pinky2_pinky3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}pinky2_pinky3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}palm_thumb_zero_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}palm_thumb_zero">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}palm_thumb_zero_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}palm_thumb0_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}palm_thumb0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}palm_thumb0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}thumb0_thumb1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}thumb0_thumb1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}thumb0_thumb1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}thumb1_thumb2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}thumb1_thumb2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}thumb1_thumb2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<transmission name="${prefix}thumb2_thumb3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${prefix}thumb2_thumb3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${prefix}thumb2_thumb3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+
+
+
+<!-- #######################################################################################
+#######################################################################################
+####################################################################################### -->
+
+<gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+         <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      </plugin>
+</gazebo>
+
+<gazebo reference="${prefix}shoulder">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}humerus">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}elbow">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}forearm">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}wristy">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}wristx">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}wristz">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}palm">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}index0">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}index1">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}index2">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}index3">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}middle0">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}middle1">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}middle2">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}middle3">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}ring0">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}ring1">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}ring2">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}ring3">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}pinky0">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}pinky1">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}pinky2">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}pinky3">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}thumb_zero_zero">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}thumb0">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}thumb1">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}thumb2">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="${prefix}thumb3">
+      <selfCollide>true</selfCollide>
+</gazebo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</robot>

@@ -1,0 +1,47 @@
+controller_list:
+  - name: fake_arm_group_controller
+    joints:
+      - right_shoulder_humerus
+      - right_humerus_elbow
+      - right_elbow_forearm
+      - right_forearm_wristy
+      - right_wristy_wristx
+      - right_wristx_wristz
+  - name: fake_index_group_controller
+    joints:
+      - right_palm_index0
+      - right_index0_index1
+      - right_index1_index2
+      - right_index2_index3
+  - name: fake_middle_group_controller
+    joints:
+      - right_palm_middle0
+      - right_middle0_middle1
+      - right_middle1_middle2
+      - right_middle2_middle3
+  - name: fake_ring_group_controller
+    joints:
+      - right_palm_ring0
+      - right_ring0_ring1
+      - right_ring1_ring2
+      - right_ring2_ring3
+  - name: fake_pinky_group_controller
+    joints:
+      - right_palm_pinky0
+      - right_pinky0_pinky1
+      - right_pinky1_pinky2
+      - right_pinky2_pinky3
+  - name: fake_thumb_group_controller
+    joints:
+      - right_palm_thumb_zero
+      - right_palm_thumb0
+      - right_thumb0_thumb1
+      - right_thumb1_thumb2
+      - right_thumb2_thumb3
+initial:  # Define initial robot poses.
+  - group: arm_group
+    pose: pose_one
+  - group: index_group
+    pose: grab_one
+  - group: middle_group
+    pose: grab_two

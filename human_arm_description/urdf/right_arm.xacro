@@ -1,8 +1,8 @@
 <?xml version='1.0'?>
 
-<robot name="hand" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-
+<xacro:include filename="$(find human_arm_description)/urdf/right_arm.gazebo" />
 <xacro:property name="prefix" value="right_"/>
 
 <link name="${prefix}shoulder">

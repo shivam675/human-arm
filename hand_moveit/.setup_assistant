@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: human_arm_description
+    relative_path: urdf/right_arm.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/right_arm.srdf
+  CONFIG:
+    author_name: shivam_chavan
+    author_email: shivam31199@gmail.com
+    generated_timestamp: 1623052037
