@@ -1,0 +1,80 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+arm_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_shoulder_humerus
+    - right_humerus_elbow
+    - right_elbow_forearm
+    - right_forearm_wristy
+    - right_wristy_wristx
+    - right_wristx_wristz
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+
+
+index_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_palm_index0
+    - right_index0_index1
+    - right_index1_index2
+    - right_index2_index3
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+
+
+middle_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_palm_middle0
+    - right_middle0_middle1
+    - right_middle1_middle2
+    - right_middle2_middle3
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+  
+
+
+ring_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_palm_ring0
+    - right_ring0_ring1
+    - right_ring1_ring2
+    - right_ring2_ring3
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+
+
+pinky_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_palm_pinky0
+    - right_pinky0_pinky1
+    - right_pinky1_pinky2
+    - right_pinky2_pinky3
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+
+
+thumb_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_palm_thumb_zero
+    - right_palm_thumb0
+    - right_thumb0_thumb1
+    - right_thumb1_thumb2
+    - right_thumb2_thumb3
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+
+

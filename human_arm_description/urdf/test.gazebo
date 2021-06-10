@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+
+<robot name="right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!-- <xacro:property name="prefix" value="right_"/> -->
+
+<transmission name="right_shoulder_humerus_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_shoulder_humerus">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_shoulder_humerus_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+</robot>

@@ -351,7 +351,7 @@
       </plugin>
 </gazebo>
 
-<gazebo reference="${prefix}shoulder">
+<!-- <gazebo reference="${prefix}shoulder">
       <selfCollide>true</selfCollide>
 </gazebo>
 
@@ -465,7 +465,7 @@
 
 <gazebo reference="${prefix}thumb3">
       <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
 
 
 

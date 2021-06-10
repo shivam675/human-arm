@@ -101,6 +101,7 @@
     <disable_collisions link1="right_elbow" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_elbow" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_elbow" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_elbow" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_elbow" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_elbow" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_elbow" link2="right_wristz" reason="Never" />
@@ -126,6 +127,7 @@
     <disable_collisions link1="right_forearm" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_forearm" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_forearm" link2="right_thumb2" reason="Never" />
+    <disable_collisions link1="right_forearm" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_forearm" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_forearm" link2="right_wristy" reason="Adjacent" />
     <disable_collisions link1="right_forearm" link2="right_wristz" reason="Never" />
@@ -151,6 +153,7 @@
     <disable_collisions link1="right_humerus" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_humerus" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_humerus" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_humerus" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_humerus" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_humerus" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_humerus" link2="right_wristz" reason="Never" />
@@ -171,6 +174,7 @@
     <disable_collisions link1="right_index0" link2="right_shoulder" reason="Never" />
     <disable_collisions link1="right_index0" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_index0" link2="right_thumb1" reason="Never" />
+    <disable_collisions link1="right_index0" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_index0" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_index0" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_index0" link2="right_wristz" reason="Never" />
@@ -186,6 +190,7 @@
     <disable_collisions link1="right_index1" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_index1" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_index1" link2="right_thumb2" reason="Never" />
+    <disable_collisions link1="right_index1" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_index1" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_index1" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_index1" link2="right_wristz" reason="Never" />
@@ -200,6 +205,7 @@
     <disable_collisions link1="right_index2" link2="right_shoulder" reason="Never" />
     <disable_collisions link1="right_index2" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_index2" link2="right_thumb1" reason="Never" />
+    <disable_collisions link1="right_index2" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_index2" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_index2" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_index2" link2="right_wristz" reason="Never" />
@@ -211,6 +217,7 @@
     <disable_collisions link1="right_index3" link2="right_ring0" reason="Never" />
     <disable_collisions link1="right_index3" link2="right_shoulder" reason="Never" />
     <disable_collisions link1="right_index3" link2="right_thumb0" reason="Never" />
+    <disable_collisions link1="right_index3" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_index3" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_index3" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_index3" link2="right_wristz" reason="Never" />
@@ -228,6 +235,7 @@
     <disable_collisions link1="right_middle0" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_middle0" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_middle0" link2="right_thumb2" reason="Never" />
+    <disable_collisions link1="right_middle0" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_middle0" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_middle0" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_middle0" link2="right_wristz" reason="Never" />
@@ -239,6 +247,7 @@
     <disable_collisions link1="right_middle1" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_middle1" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_middle1" link2="right_thumb2" reason="Never" />
+    <disable_collisions link1="right_middle1" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_middle1" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_middle1" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_middle1" link2="right_wristz" reason="Never" />
@@ -251,6 +260,7 @@
     <disable_collisions link1="right_middle2" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_middle2" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_middle2" link2="right_thumb2" reason="Never" />
+    <disable_collisions link1="right_middle2" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_middle2" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_middle2" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_middle2" link2="right_wristz" reason="Never" />
@@ -261,6 +271,7 @@
     <disable_collisions link1="right_middle3" link2="right_shoulder" reason="Never" />
     <disable_collisions link1="right_middle3" link2="right_thumb0" reason="Never" />
     <disable_collisions link1="right_middle3" link2="right_thumb1" reason="Never" />
+    <disable_collisions link1="right_middle3" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_middle3" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_middle3" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_middle3" link2="right_wristz" reason="Never" />
@@ -270,8 +281,9 @@
     <disable_collisions link1="right_palm" link2="right_ring0" reason="Adjacent" />
     <disable_collisions link1="right_palm" link2="right_ring2" reason="Never" />
     <disable_collisions link1="right_palm" link2="right_shoulder" reason="Never" />
-    <disable_collisions link1="right_palm" link2="right_thumb0" reason="Adjacent" />
+    <disable_collisions link1="right_palm" link2="right_thumb0" reason="Default" />
     <disable_collisions link1="right_palm" link2="right_thumb1" reason="Default" />
+    <disable_collisions link1="right_palm" link2="right_thumb_zero_zero" reason="Adjacent" />
     <disable_collisions link1="right_palm" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_palm" link2="right_wristz" reason="Adjacent" />
     <disable_collisions link1="right_pinky0" link2="right_pinky1" reason="Adjacent" />
@@ -284,6 +296,7 @@
     <disable_collisions link1="right_pinky0" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_pinky0" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_pinky0" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_pinky0" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_pinky0" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_pinky0" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_pinky0" link2="right_wristz" reason="Never" />
@@ -294,6 +307,7 @@
     <disable_collisions link1="right_pinky1" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_pinky1" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_pinky1" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_pinky1" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_pinky1" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_pinky1" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_pinky1" link2="right_wristz" reason="Never" />
@@ -304,6 +318,7 @@
     <disable_collisions link1="right_pinky2" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_pinky2" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_pinky2" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_pinky2" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_pinky2" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_pinky2" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_pinky2" link2="right_wristz" reason="Never" />
@@ -313,6 +328,7 @@
     <disable_collisions link1="right_pinky3" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_pinky3" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_pinky3" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_pinky3" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_pinky3" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_pinky3" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_pinky3" link2="right_wristz" reason="Never" />
@@ -324,6 +340,7 @@
     <disable_collisions link1="right_ring0" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_ring0" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_ring0" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_ring0" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_ring0" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_ring0" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_ring0" link2="right_wristz" reason="Never" />
@@ -334,6 +351,7 @@
     <disable_collisions link1="right_ring1" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_ring1" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_ring1" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_ring1" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_ring1" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_ring1" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_ring1" link2="right_wristz" reason="Never" />
@@ -343,6 +361,7 @@
     <disable_collisions link1="right_ring2" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_ring2" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_ring2" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_ring2" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_ring2" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_ring2" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_ring2" link2="right_wristz" reason="Never" />
@@ -351,6 +370,7 @@
     <disable_collisions link1="right_ring3" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_ring3" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_ring3" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_ring3" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_ring3" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_ring3" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_ring3" link2="right_wristz" reason="Never" />
@@ -358,16 +378,24 @@
     <disable_collisions link1="right_shoulder" link2="right_thumb1" reason="Never" />
     <disable_collisions link1="right_shoulder" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_shoulder" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_shoulder" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_shoulder" link2="right_wristx" reason="Never" />
     <disable_collisions link1="right_shoulder" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_shoulder" link2="right_wristz" reason="Never" />
     <disable_collisions link1="right_thumb0" link2="right_thumb1" reason="Adjacent" />
     <disable_collisions link1="right_thumb0" link2="right_thumb2" reason="Never" />
     <disable_collisions link1="right_thumb0" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_thumb0" link2="right_thumb_zero_zero" reason="Adjacent" />
     <disable_collisions link1="right_thumb0" link2="right_wristy" reason="Never" />
     <disable_collisions link1="right_thumb1" link2="right_thumb2" reason="Adjacent" />
     <disable_collisions link1="right_thumb1" link2="right_thumb3" reason="Never" />
+    <disable_collisions link1="right_thumb1" link2="right_thumb_zero_zero" reason="Never" />
     <disable_collisions link1="right_thumb2" link2="right_thumb3" reason="Adjacent" />
+    <disable_collisions link1="right_thumb2" link2="right_thumb_zero_zero" reason="Never" />
+    <disable_collisions link1="right_thumb3" link2="right_thumb_zero_zero" reason="Never" />
+    <disable_collisions link1="right_thumb_zero_zero" link2="right_wristx" reason="Never" />
+    <disable_collisions link1="right_thumb_zero_zero" link2="right_wristy" reason="Never" />
+    <disable_collisions link1="right_thumb_zero_zero" link2="right_wristz" reason="Never" />
     <disable_collisions link1="right_wristx" link2="right_wristy" reason="Adjacent" />
     <disable_collisions link1="right_wristx" link2="right_wristz" reason="Adjacent" />
     <disable_collisions link1="right_wristy" link2="right_wristz" reason="Never" />

@@ -4,136 +4,136 @@
 joint_limits:
   right_elbow_forearm:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_forearm_wristy:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_humerus_elbow:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_index0_index1:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_index1_index2:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_index2_index3:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_middle0_middle1:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_middle1_middle2:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_middle2_middle3:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_palm_index0:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_palm_middle0:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_palm_pinky0:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_palm_ring0:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_palm_thumb0:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_palm_thumb_zero:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_pinky0_pinky1:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_pinky1_pinky2:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_pinky2_pinky3:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_ring0_ring1:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_ring1_ring2:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_ring2_ring3:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_shoulder_humerus:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_thumb0_thumb1:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_thumb1_thumb2:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_thumb2_thumb3:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_wristx_wristz:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0
   right_wristy_wristx:
     has_velocity_limits: true
-    max_velocity: 0.5
+    max_velocity: 1
     has_acceleration_limits: false
     max_acceleration: 0

@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+
+<robot name="right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find human_arm_description)/urdf/right_arm.xacro" />
+<!-- <xacro:include filename="$(find human_arm_description)/urdf/right_arm.gazebo" /> -->
+<xacro:property name="prefix" value="right_"/>
+
+
+<link name="world"/>
+
+
+<joint
+    name="world_joint" type="fixed">
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="${prefix}shoulder" />
+    <limit lower="0.1" upper="0.1" effort="0.1" velocity="0.1"/>
+    <!-- <dynamics damping="5" friction="0.0"/> -->
+</joint>
+
+
+</robot>

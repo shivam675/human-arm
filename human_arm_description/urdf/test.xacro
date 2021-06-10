@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+
+<robot name="right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find human_arm_description)/urdf/right_arm.gazebo" />
+<!-- <xacro:property name="prefix" value="right_"/> -->
+
+
+
+<link name="right_shoulder">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0363799" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/shoulder.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+         <mesh  filename="package://human_arm_description/meshes/shoulder.stl" />
+      </geometry>
+    </collision>
+</link>
+
+<joint
+    name="right_shoulder_humerus" type="revolute">
+    <origin xyz="0 0 0.015" rpy="0 0 0" />
+    <parent link="right_shoulder" />
+    <child link="right_humerus" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.14" upper="0.345" effort="150.0" velocity="1"/>
+    <!-- dynamics damping="5" friction="0.0"/ -->
+</joint>
+
+
+<link name="right_humerus">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.7" />
+          <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.0030" iyz="0" izz="0.0035"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="package://human_arm_description/meshes/humerus.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <mesh  filename="package://human_arm_description/meshes/humerus.stl" />
+      </geometry>
+    </collision>
+</link>
+
+
+</robot>
