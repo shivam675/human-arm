@@ -22,6 +22,7 @@ class arm_main:
         self._robot = moveit_commander.RobotCommander()
         self._scene = moveit_commander.PlanningSceneInterface()
         self._group = moveit_commander.MoveGroupCommander(self._planning_group)
+        self._group.set_max_velocity_scaling_factor(1)
         self._display_trajectory_publisher = rospy.Publisher(
             '/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=1)
 
@@ -40,6 +41,7 @@ class arm_main:
     def set_joint_angles(self, arg_list_joint_angles, group):
         self._planning_group = group
         self._group = moveit_commander.MoveGroupCommander(self._planning_group)
+        self._group.set_max_velocity_scaling_factor(1)
         list_joint_values = self._group.get_current_joint_values()
         rospy.loginfo('\033[94m' + ">>> Current Joint Values:" + '\033[0m')
         rospy.loginfo(list_joint_values)

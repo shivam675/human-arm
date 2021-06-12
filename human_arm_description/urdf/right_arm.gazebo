@@ -74,17 +74,6 @@
 </transmission>
 
 
-<!-- <transmission name="${prefix}wristz_palm_tran">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="${prefix}wristz_palm">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="${prefix}wristz_palm_motor">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-</transmission> -->
-
 
 <transmission name="${prefix}palm_index0_tran">
     <type>transmission_interface/SimpleTransmission</type>
@@ -351,121 +340,6 @@
       </plugin>
 </gazebo>
 
-<!-- <gazebo reference="${prefix}shoulder">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}humerus">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}elbow">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}forearm">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}wristy">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}wristx">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}wristz">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}palm">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}index0">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}index1">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}index2">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}index3">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}middle0">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}middle1">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}middle2">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}middle3">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}ring0">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}ring1">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}ring2">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}ring3">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}pinky0">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}pinky1">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}pinky2">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}pinky3">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}thumb_zero_zero">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}thumb0">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}thumb1">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}thumb2">
-      <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="${prefix}thumb3">
-      <selfCollide>true</selfCollide>
-</gazebo> -->
 
 
 
@@ -474,7 +348,93 @@
 
 
 
-
+<gazebo reference="${prefix}shoulder">
+      <material>Gazebo/Grey</material>
+   </gazebo>
+   <gazebo reference="${prefix}humerus">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}elbow">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}forearm">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}wristy">
+      <material>Gazebo/Grey</material>
+   </gazebo>
+   <gazebo reference="${prefix}wristx">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}wristz">
+      <material>Gazebo/Grey</material>
+   </gazebo>
+   <gazebo reference="${prefix}palm">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}index0">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}index1">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}index2">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}index3">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}middle0">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}middle1">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}middle2">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}middle3">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}ring0">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}ring1">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}ring2">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}ring3">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}pinky0">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}pinky1">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}pinky2">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}pinky3">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}thumb_zero_zero">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}thumb0">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+  <gazebo reference="${prefix}thumb1">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="${prefix}thumb2">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="${prefix}thumb3">
+      <material>Gazebo/Orange</material>
+   </gazebo>
 
 
 

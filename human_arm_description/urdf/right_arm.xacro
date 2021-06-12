@@ -34,7 +34,7 @@
     <parent link="${prefix}shoulder" />
     <child link="${prefix}humerus" />
     <axis xyz="1 0 0" />
-    <limit lower="-3.14" upper="0.345" effort="150.0" velocity="1"/>
+    <limit lower="-3.14" upper="0.345" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -70,7 +70,7 @@
     <parent link="${prefix}humerus" />
     <child link="${prefix}elbow" />
     <axis xyz="0 1 0" />
-    <limit lower="-3.142" upper="0" effort="150.0" velocity="1"/>
+    <limit lower="-3.142" upper="0" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -109,7 +109,7 @@
     <parent link="${prefix}elbow" />
     <child link="${prefix}forearm" />
     <axis xyz="0 0 1" />
-    <limit lower="0" upper="2.4" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="2.4" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -147,7 +147,7 @@
     <parent link="${prefix}forearm" />
     <child link="${prefix}wristy" />
     <axis xyz="0 1 0" />
-    <limit lower="-3.142" upper="2" effort="150.0" velocity="1"/>
+    <limit lower="-3.142" upper="2" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -187,7 +187,7 @@
     <parent link="${prefix}wristy" />
     <child link="${prefix}wristx" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="0.697" effort="150.0" velocity="1"/>
+    <limit lower="-0.697" upper="0.697" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -229,7 +229,7 @@
     <parent link="${prefix}wristx" />
     <child link="${prefix}wristz" />
     <axis xyz="1 0 0" />
-    <limit lower="-1" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="-1" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -266,7 +266,7 @@
     <parent link="${prefix}wristz" />
     <child link="${prefix}palm" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="-0.697" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -317,7 +317,7 @@
     <parent link="${prefix}palm" />
     <child link="${prefix}index0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="1"/>
+    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -361,7 +361,7 @@
     <parent link="${prefix}index0" />
     <child link="${prefix}index1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -399,7 +399,7 @@
     <parent link="${prefix}index1" />
     <child link="${prefix}index2" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -439,7 +439,7 @@
     <parent link="${prefix}index2" />
     <child link="${prefix}index3" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -489,7 +489,7 @@
     <parent link="${prefix}palm" />
     <child link="${prefix}middle0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="1"/>
+    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -528,7 +528,7 @@
     <parent link="${prefix}middle0" />
     <child link="${prefix}middle1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -566,7 +566,7 @@
     <parent link="${prefix}middle1" />
     <child link="${prefix}middle2" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -606,7 +606,7 @@
     <parent link="${prefix}middle2" />
     <child link="${prefix}middle3" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -661,7 +661,7 @@
     <parent link="${prefix}palm" />
     <child link="${prefix}ring0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="1"/>
+    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -699,7 +699,7 @@
     <parent link="${prefix}ring0" />
     <child link="${prefix}ring1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -740,7 +740,7 @@
     <parent link="${prefix}ring1" />
     <child link="${prefix}ring2" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -780,7 +780,7 @@
     <parent link="${prefix}ring2" />
     <child link="${prefix}ring3" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -829,7 +829,7 @@
     <parent link="${prefix}palm" />
     <child link="${prefix}pinky0" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="1"/>
+    <limit lower="-0.3" upper="0.3" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -870,7 +870,7 @@
     <parent link="${prefix}pinky0" />
     <child link="${prefix}pinky1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="-0.2" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -911,7 +911,7 @@
     <parent link="${prefix}pinky1" />
     <child link="${prefix}pinky2" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -951,7 +951,7 @@
     <parent link="${prefix}pinky2" />
     <child link="${prefix}pinky3" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.57" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.57" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -997,7 +997,7 @@
     <parent link="${prefix}palm" />
     <child link="${prefix}thumb_zero_zero" />
     <axis xyz="1 0 0" />
-    <limit lower="0" upper="1.8" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.8" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -1036,7 +1036,7 @@
     <parent link="${prefix}thumb_zero_zero" />
     <child link="${prefix}thumb0" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.8" effort="150.0" velocity="1"/>
+    <limit lower="0" upper="1.8" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -1077,7 +1077,7 @@
     <parent link="${prefix}thumb0" />
     <child link="${prefix}thumb1" />
     <axis xyz="0 0 1" />
-    <limit lower="-1" upper="0" effort="150.0" velocity="1"/>
+    <limit lower="-1" upper="0" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -1118,7 +1118,7 @@
     <parent link="${prefix}thumb1" />
     <child link="${prefix}thumb2" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.8" upper="0" effort="150.0" velocity="1"/>
+    <limit lower="-0.8" upper="0" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
@@ -1158,7 +1158,7 @@
     <parent link="${prefix}thumb2" />
     <child link="${prefix}thumb3" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.697" upper="0" effort="150.0" velocity="1"/>
+    <limit lower="-0.697" upper="0" effort="150.0" velocity="3"/>
     <!-- dynamics damping="5" friction="0.0"/ -->
 </joint>
 
